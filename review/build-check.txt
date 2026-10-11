@@ -1,0 +1,30 @@
+$ node scripts/generate.mjs && tsc --noEmit && vite build && node scripts/check-build.mjs
+Generated 17 pages and 16 sitemap URLs.
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 43 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/404.html                            3.93 kB │ gzip:  1.48 kB
+dist/contact/index.html                  4.71 kB │ gzip:  1.87 kB
+dist/terms/index.html                    4.86 kB │ gzip:  1.95 kB
+dist/about/index.html                    4.93 kB │ gzip:  1.95 kB
+dist/privacy/index.html                  5.67 kB │ gzip:  2.28 kB
+dist/guide/index.html                    6.12 kB │ gzip:  2.41 kB
+dist/sort-lines/index.html               6.86 kB │ gzip:  2.68 kB
+dist/remove-duplicate-lines/index.html   6.96 kB │ gzip:  2.68 kB
+dist/case-converter/index.html           6.98 kB │ gzip:  2.72 kB
+dist/whitespace-cleaner/index.html       7.02 kB │ gzip:  2.78 kB
+dist/find-and-replace/index.html         7.03 kB │ gzip:  2.76 kB
+dist/word-frequency/index.html           7.04 kB │ gzip:  2.84 kB
+dist/text-diff/index.html                7.04 kB │ gzip:  2.81 kB
+dist/lorem-ipsum/index.html              7.13 kB │ gzip:  2.84 kB
+dist/remove-line-breaks/index.html       7.19 kB │ gzip:  2.76 kB
+dist/index.html                          8.28 kB │ gzip:  2.87 kB
+dist/character-counter/index.html        9.09 kB │ gzip:  3.38 kB
+dist/assets/worker-D3sSvXhN.js          15.20 kB
+dist/assets/app-91MP3qBO.css            19.23 kB │ gzip:  5.04 kB
+dist/assets/app--ITAKMkq.js             36.42 kB │ gzip: 12.82 kB
+
+✓ built in 471ms
+Static check passed: 17 pages, 16 canonical sitemap URLs, 417 local references, unique metadata and structured data, no active ad/analytics code.

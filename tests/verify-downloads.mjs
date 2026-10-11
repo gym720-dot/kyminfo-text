@@ -1,0 +1,15 @@
+import {readFile,copyFile,writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {txtBytes,csv,frequencies} from '../src/engine.ts';
+const [txtPath,csvPath]=process.argv.slice(2);
+if(!txtPath||!csvPath)throw new Error('Usage: node tests/verify-downloads.mjs <downloaded TXT path> <downloaded CSV path>');
+const txt=await readFile(txtPath);
+assert.deepEqual(new Uint8Array(txt),txtBytes('가 A\n😀',true,true));
+const actual=await readFile(csvPath);
+const expected=csv(frequencies(Array.from({length:150},(_,i)=>'항목'+i).join(' '),{ignoreCase:true}).rows);
+assert.equal(actual.toString('utf8'),expected);
+await copyFile(csvPath,new URL('actual/frequency-150.csv',import.meta.url));
+await copyFile(txtPath,new URL('actual/counter-bom-crlf.txt',import.meta.url));
+const result={checkedAt:new Date().toISOString(),txt:{bytes:txt.length,exactContent:true,bom:true,lineEnding:'CRLF'},csv:{bytes:actual.length,entries:150,exactContent:true,bom:true}};
+await writeFile(new URL('actual/download-verification.json',import.meta.url),JSON.stringify(result,null,2));
+console.log(result);
