@@ -25,3 +25,8 @@ pre{font-family:inherit;font-size:14px;line-height:1.9}.unsaved-note{font-size:1
 
 /* Family compact widths */
 .family-top>summary{min-width:0;min-height:0}.family-top{align-self:center}@media(max-width:600px){.site-header>.header-link{display:none}.site-header>.family-top{margin-left:auto}.family-top>summary{padding:8px 10px}}
+
+/* Shared public email contact affordances. */
+.contact-method a.text-link{color:#4059cf;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.contact-method p:nth-of-type(2) a.text-link{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:12px;background:#4059cf;color:#fff;font-weight:700;text-decoration:none}
+.contact-method a.text-link:focus-visible{outline:3px solid #8e9dff;outline-offset:4px}
