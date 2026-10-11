@@ -1,6 +1,6 @@
 # 키미 텍스트
 
-`text.kyminfo.com`에서 제공하는 정적 텍스트 도구입니다. 2026-10-12 GitHub `gym720-dot/kyminfo-text`와 Cloudflare Pages `kyminfo-text`를 연결했습니다. 사용자 DNS 등록 완료, HTTPS 활성화 최종 확인 진행 중입니다. 구글·네이버 등록과 광고 연결은 추후 진행합니다.
+`text.kyminfo.com`에서 제공하는 정적 텍스트 도구입니다. 2026-10-12 GitHub `gym720-dot/kyminfo-text`와 Cloudflare Pages `kyminfo-text`를 연결했습니다. DNS·HTTPS 활성화 및 실제 사이트의 메뉴·아이콘 확인을 완료했습니다. 구글·네이버 등록과 광고 연결은 추후 진행합니다.
 
 2026년 10월 12일 사용자 결정에 따라 코드와 함께 DNS·구글/네이버 등록·광고 연결은 추후 진행합니다. 재개 순서는 [두 사이트 후속 작업 목록](../text-code-next-steps.md)에 기록했습니다.
 
