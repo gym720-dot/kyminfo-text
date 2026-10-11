@@ -24,4 +24,4 @@ for(const p of pages){
 const sitemap=await readFile(file('sitemap.xml'),'utf8');assert.equal((sitemap.match(/<loc>/g)||[]).length,16);assert.ok(!sitemap.includes('404'));assert.ok((await readFile(file('robots.txt'),'utf8')).includes(domain+'/sitemap.xml'));
 const headers=await readFile(file('_headers'),'utf8');assert.ok(headers.includes("connect-src 'self'"));assert.ok(headers.includes("object-src 'none'"));
 assert.ok(headers.includes('https://:version.:project.pages.dev/*'));assert.ok((await readFile(file('licenses.txt'),'utf8')).includes('BSD 3-Clause'));
-console.log(`Static check passed: ${pages.length} pages, 16 canonical sitemap URLs, ${links} local references, unique metadata and structured data, no active ad/analytics code.`);
+console.log(`Static check passed: ${pages.length} pages, 16 canonical sitemap URLs, ${links} local references, unique metadata and structured data, no active ads or Google Analytics; Cloudflare beacon is injected at deployment.`);

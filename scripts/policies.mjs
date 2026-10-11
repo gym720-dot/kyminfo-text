@@ -34,7 +34,7 @@ export const policyPages = {
       ],
       [
         "7. 쿠키·광고·방문 분석",
-        "현재 5개 키미 도구 사이트에는 AdSense 광고 요청 코드, Google Analytics 및 자체 추적 쿠키를 설치하지 않았습니다. 호스팅 보안 기능이 필요한 쿠키를 사용하는 경우 제공자 정책과 브라우저 설정이 적용됩니다. 향후 광고·분석을 활성화하기 전에 실제 제공자, 처리 항목·목적, 쿠키와 개인 맞춤 광고 선택 방법을 갱신하고 필요한 고지·동의 절차를 마련합니다. 광고를 연결하지 않은 현재 상태와 향후 도입 계획을 구분해 안내합니다."
+        "2026-10-12부터 5개 키미 도구 사이트에서 Cloudflare Web Analytics를 사용합니다. 페이지 조회·방문 횟수, 페이지 경로, 유입 경로, 국가, 브라우저·기기 종류와 페이지 로딩 성능을 집계해 이용 흐름과 오류·성능을 개선합니다. 분석 스크립트가 Cloudflare로 측정 지표를 전송하며 도구에 입력한 원문·파일·비밀번호·계산값을 분석 이벤트로 전송하지 않습니다. Cloudflare는 이 분석에서 방문자 추적 쿠키·localStorage와 브라우저 지문을 이용하지 않는다고 안내합니다. 페이지 주소의 쿼리 문자열은 수집하지 않지만 URL 경로와 유입 링크에는 개인정보를 넣지 마세요. 브라우저의 콘텐츠 차단 기능으로 분석 스크립트가 차단되면 일부 방문이 집계되지 않을 수 있으며 도구 이용에는 영향이 없습니다. Visits는 서로 다른 사람 수와 동일하지 않으며 같은 사람의 재방문이 별도로 집계될 수 있습니다. 웹페이지 전달·보안에 필요한 접속 처리는 위 호스팅 안내와 제공자 정책을 따릅니다. 현재 AdSense 광고 요청 코드, Google Analytics 및 자체 추적 쿠키는 설치하지 않았습니다. 향후 광고나 다른 분석 도구를 도입하기 전에 실제 제공자·처리 항목·쿠키·선택 방법과 필요한 동의 절차를 갱신합니다. 분석 도입(2026-10-12): Cloudflare Web Analytics 이용과 처리 범위를 추가했습니다."
       ],
       [
         "8. 복사·다운로드·외부 사이트",
@@ -50,7 +50,7 @@ export const policyPages = {
       ],
       [
         "11. 문의·권리 구제·변경",
-        "개인정보 담당: 키미 사이트 운영자 / kymi.help@gmail.com. 개인정보 침해 상담·분쟁조정이 필요하면 아래 개인정보 포털과 개인정보 분쟁조정위원회를 이용할 수 있습니다. 처리 방식이 달라지면 시행일과 변경 내용을 이 페이지에 알리고, 동의가 필요한 변경은 관련 절차를 거칩니다. 이번 변경(2026-10-12): 문의 방식·보관/삭제·권리 요청·접속 처리·사이트별 저장 범위를 구체화했습니다."
+        "개인정보 담당: 키미 사이트 운영자 / kymi.help@gmail.com. 개인정보 침해 상담·분쟁조정이 필요하면 아래 개인정보 포털과 개인정보 분쟁조정위원회를 이용할 수 있습니다. 처리 방식이 달라지면 시행일과 변경 내용을 이 페이지에 알리고, 동의가 필요한 변경은 관련 절차를 거칩니다. 이번 변경(2026-10-12): 문의 방식·보관/삭제·권리 요청·접속 처리·사이트별 저장 범위를 구체화하고 Cloudflare Web Analytics 사용을 반영했습니다."
       ]
     ],
     "extra": "<section class=\"content-card policy-references\"><h2>공식 정책·권리 구제 안내</h2><ul><li><a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener noreferrer\">Cloudflare 개인정보처리방침 ↗</a></li><li><a href=\"https://policies.google.com/privacy?hl=ko\" target=\"_blank\" rel=\"noopener noreferrer\">Google 개인정보처리방침(Gmail) ↗</a></li><li><a href=\"https://www.privacy.go.kr/\" target=\"_blank\" rel=\"noopener noreferrer\">개인정보 포털 ↗</a></li><li><a href=\"https://www.kopico.go.kr/\" target=\"_blank\" rel=\"noopener noreferrer\">개인정보 분쟁조정위원회 ↗</a></li></ul></section>"
