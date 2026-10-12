@@ -1,3 +1,4 @@
+import {pipeline,repairPdf,maskCandidates} from './workflow.ts';
 import { diffLines, diffWordsWithSpace } from 'diff';
 
 export const MAX_INPUT = 200_000;
@@ -134,8 +135,8 @@ export function run(mode: string, input: string, second: string, o: Options): Re
   let output = input, note = '';
   switch(mode) {
     case 'character-counter': return {output, note:'', stats:countText(input)};
-    case 'remove-line-breaks': output = removeBreaks(input,String(o.breakMode)); note='선택한 규칙으로 줄바꿈을 정리했습니다.'; break;
-    case 'whitespace-cleaner': output=cleanSpace(input,o); note='선택한 공백만 정리했습니다. 원문과 비교해 주세요.'; break;
+    case 'remove-line-breaks': output = o.pdfRepair?repairPdf(input,!!o.pdfHyphens):removeBreaks(input,String(o.breakMode)); note='선택한 규칙으로 줄바꿈을 정리했습니다.'; break;
+    case 'whitespace-cleaner': output=pipeline(input,o); {const m=maskCandidates(output,o);output=m.output;note=`공백 → 중복 제거 → 정렬 → 선택한 마스킹 순서. 후보 이메일 ${m.counts.email} · 전화 ${m.counts.phone} · 주민번호 형태 ${m.counts.id}개. 오탐·누락이 있으므로 미리보기를 확인한 후 직접 적용하세요. 완전한 익명화를 보장하지 않습니다.`;} break;
     case 'remove-duplicate-lines': { const r=deduplicate(input,o); output=r.output; note=`중복 줄 ${r.removed.toLocaleString('ko')}개를 제거했습니다.`; break; }
     case 'sort-lines': output=sortLines(input,o); note='줄 내용을 보존하며 선택한 순서로 정렬했습니다.'; break;
     case 'case-converter': output=changeCase(input,String(o.caseMode)); note='영문 대소문자를 변환했습니다. 약어와 고유명사를 확인해 주세요.'; break;

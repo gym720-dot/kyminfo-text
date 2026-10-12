@@ -42,3 +42,10 @@ export const info = [
  {...policyPages.contact},
 ];
 export const pages = [{slug:'',name:'키미 텍스트',desc:'글자수·바이트 세기, 줄바꿈·공백 정리, 텍스트 비교와 영문 편집을 위한 무료 도구.'},...tools,...info,{slug:'404',name:'페이지를 찾을 수 없습니다',desc:'주소를 확인하거나 키미 텍스트의 도구 목록으로 이동하세요.'}];
+
+// Phase5 visible, static explanations.
+tools.find(t=>t.slug==="character-counter").sections.push(["자소서 500·700·1,000자 프리셋","빠른 제한량을 선택하고 공백 포함·제외 또는 UTF-8을 골라 확인하세요. 모바일에서 편집 중에는 하단에 분량 요약을 표시합니다. 원문을 자동으로 자르지 않습니다."]);
+tools.find(t=>t.slug==="whitespace-cleaner").sections.push(["목록 정리와 개인정보 후보 미리보기","공백 정리 다음 중복 제거·자연 정렬을 선택해 적용합니다. 전화·이메일·주민번호 형태 마스킹은 선택한 경우에만 미리보기에 반영하며 원문 적용은 별도 버튼입니다. 오탐·누락이 있으므로 완전한 익명화를 보장하지 않습니다. 한 줄씩 CSV로 저장할 때 수식 형태를 보호하고 Excel 텍스트 보호를 선택하면 선행 0 보존용 작은따옴표를 붙입니다."]);
+tools.find(t=>t.slug==="remove-line-breaks").sections.push(["PDF에서 복사한 영문 단어와 문단","PDF 복사 문단 정리에서 빈 줄 문단을 유지하고 이어진 줄을 연결합니다. 영문 줄끝 하이픈 연결은 별도로 켭니다. inter- 다음 줄 national을 international로 합칠 수 있지만 실제 하이픈 단어도 바뀔 수 있습니다. 결과와 원문을 비교하고 직접 적용한 뒤 작업 되돌리기를 사용할 수 있습니다."]);
+tools.find(t=>t.slug==="text-diff").sections.push(["변경 이동과 비교 보고서","추가·삭제 구간 수를 보고 이전/다음 변경으로 이동하세요. 수정문 복사와 차이 보고서 복사는 서로 다릅니다. 차이 TXT·HTML에는 원문도 포함될 수 있으므로 공유 전 내용을 확인하세요. HTML 보고서는 텍스트를 이스케이프하며 외부 리소스를 요청하지 않습니다."]);
+tools.find(t=>t.slug==='remove-line-breaks').sample='한글 문장은\n줄을 연결합니다.\n\nAn inter-\nnational document\nkeeps paragraphs.';

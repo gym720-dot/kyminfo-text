@@ -8,7 +8,7 @@ export const tools: {slug:string;name:string;sample:string;second?:string}[] = [
   {
     "slug": "remove-line-breaks",
     "name": "줄바꿈 정리",
-    "sample": "읽기 쉬운 문서를\n만들기 위한 작은 정리입니다.\n\n다음 문단은\n따로 유지할 수 있습니다."
+    "sample": "한글 문장은\n줄을 연결합니다.\n\nAn inter-\nnational document\nkeeps paragraphs."
   },
   {
     "slug": "whitespace-cleaner",
